@@ -1,7 +1,20 @@
 {
-  "name": "iteshop_storybook",
-  "version": "0.1.0",
-  "private": true,
+  "name": "iteshop_react_storybook",
+  "description": "try to put the storybook to npm, and reuse it with npm",
+  "main": "src/index.jsx",
+  "version": "0.2.0",
+  "author": "harrison",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrisonh1991/iteshop_storybook.git"
+  },
+  "homepage": "https://github.com/harrisonh1991/iteshop_storybook.git",
+  "keywords": [
+    "react",
+    "storybook",
+    "iteshop"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
