@@ -1,16 +1,26 @@
-const path = require('path');
+const { resolve } = require('path');
 
 module.exports = {
-    entry: "./src/index.jsx",
-    output: {
-        path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
-    },
-    module:{
-        rules:[{
-            loader: 'babel-loader',
-            test: '/\.js$|jsx/',
-            exclude: /node_modules/
-        }]
-    }
+  entry: './src/index.js',
+  output: {
+    path: resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|build)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015", "env", "stage-2', 'react']
+          },
+          plugins:[
+            'transform-es2015-arrow-functions'
+          ]
+        }
+      }
+    ]
+  }
 };

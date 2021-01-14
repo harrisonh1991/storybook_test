@@ -1,25 +1,18 @@
 {
-  "name": "iteshop_react_storybook",
-  "description": "try to put the storybook to npm, and reuse it with npm",
-  "main": "src/index.jsx",
-  "version": "0.2.0",
-  "author": "harrison",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/harrisonh1991/iteshop_storybook.git"
-  },
-  "homepage": "https://github.com/harrisonh1991/iteshop_storybook.git",
+  "name": "iteshop_storybook_v2",
+  "description": "try to export react components from npm",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "license": "ISC",
   "keywords": [
+    "iteshop",
     "react",
-    "storybook",
-    "iteshop"
+    "components"
   ],
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
-    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -27,11 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "babel src/ --out-dir dist/",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -52,19 +43,19 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/preset-react": "^7.12.10",
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/node-logger": "^6.1.11",
-    "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.11",
-    "babel-loader": "^8.2.2",
-    "semantic-release": "^17.3.0",
-    "webpack": "^5.13.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^4.44.2",
     "webpack-cli": "^4.3.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
