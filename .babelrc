@@ -1,4 +1,20 @@
+/*
 {
-    "presets": ["es2015", "env", "stage-2", "react"],
-    "plugins": ["transform-es2015-arrow-functions"]
+    "presets": [
+        "es2015", "env", "stage-2", "react"
+    ],
+    "plugins": [
+        "transform-es2015-arrow-functions"
+    ]
+}
+*/
+
+
+{
+    "presets": [
+        "@babel/env", "@babel/react"
+    ],
+    "plugins": [
+        "transform-es2015-arrow-functions"
+    ]
 }

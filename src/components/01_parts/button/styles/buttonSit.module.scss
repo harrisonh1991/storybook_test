@@ -1,0 +1,37 @@
+$colorBlue: #3253d1;
+$colorOrange: #f8ce46;
+
+.btn{
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    padding: 0 20px;
+    &:hover{
+        box-shadow: 3px 3px 0 black;
+    }
+    &__{
+        &icon{
+            font-size: 16px;
+            position: absolute;
+            right: 20px;
+        }
+        &theme{
+            &-{
+                &default{
+                    box-shadow: 3px 3px 0 $colorBlue;
+                    &:hover{
+                        background-color: $colorBlue;
+                        box-shadow: 3px 3px 0 black;
+                    }
+                }
+                &yellow{
+                    box-shadow: 3px 3px 0 $colorOrange;
+                    &:hover{
+                        background-color: $colorOrange;
+                        box-shadow: 3px 3px 0 black;
+                    }
+                }
+            }
+        }
+    }
+}

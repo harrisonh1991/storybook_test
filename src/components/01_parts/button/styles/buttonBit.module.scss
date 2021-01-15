@@ -1,0 +1,32 @@
+@import './button.module.scss';
+
+.btn{
+    text-align: center;
+    font-size: 14px;
+    &__{
+        &icon{
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        &theme{
+            &-{
+                &default{
+                    background-color: white;
+                    color: black;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+                &black{
+                    background-color: black;
+                    color: white;
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
