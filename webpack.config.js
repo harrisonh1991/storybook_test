@@ -1,6 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const isDevelopment = process.env.NODE_ENV === 'development';
 
 const {
     resolve
@@ -15,15 +13,8 @@ module.exports = {
         libraryTarget: 'commonjs2',
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.scss']
+        extensions: ['.js', '.jsx', '.scss', '.sass']
     },
-    /*
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: isDevelopment ? '[name].css' : '[name].[hash].css'
-        })
-    ],
-    */
     module: {
         rules: [
             {
@@ -37,7 +28,10 @@ module.exports = {
                 test: /\.s(a|c)ss$/,
                 loader: [
                     {
-                        loader: 'style-loader'
+                        loader: 'style-loader',
+                        options: {
+                            esModule: true
+                        }
                     },
                     {
                         loader: 'css-loader'
@@ -56,7 +50,6 @@ module.exports = {
         }
     },
     externals: {
-        // Don't bundle react or react-dom      
         react: {
           commonjs: "react",
           commonjs2: "react",
