@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './styles/button.module.scss';
+import styles from './styles/buttonBit.module.scss';
 
 export const ButtonBit = props => {   
     
     const { href, label, theme } = props;
 
     return (
-        <a className={styles.button} href={href}>
-            <i class={['iconfont', 'icon-icon_arrowright']}></i> {label}
+        <a className={styles.btn} href={href}>
+            <i className={['iconfont', 'icon-icon_arrowright']}></i> {label}
         </a>
     );
 }
