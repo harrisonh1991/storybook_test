@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'index.scss';
 import { ButtonBit } from './src/components/01_parts/button/ButtonBit.jsx';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ButtonBit />
+    <div className={'abc'}>
+      <ButtonBit />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

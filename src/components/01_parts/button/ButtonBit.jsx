@@ -7,8 +7,8 @@ export const ButtonBit = props => {
     const { href, label, theme } = props;
 
     return (
-        <a className={styles.button} href={href}>
-            <i class={['iconfont', 'icon-icon_arrowright']}></i> {label}
+        <a className={styles.btn} href={href}>
+            <i className={['iconfont', 'icon-icon_arrowright'].join(' ')}></i> {label}
         </a>
     );
 }
