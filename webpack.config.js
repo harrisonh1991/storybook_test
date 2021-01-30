@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const isDevelopment = process.env.NODE_ENV === 'development';
 
 const {
     resolve
@@ -17,13 +16,6 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.scss']
     },
-    /*
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: isDevelopment ? '[name].css' : '[name].[hash].css'
-        })
-    ],
-    */
     module: {
         rules: [
             {
